@@ -19,7 +19,7 @@ class Binder(object):
 
     @property
     def base_path(self):
-        from oslo.pytorch._C import csrc
+        from oslo.torch._C import csrc
 
         return Path(csrc.__file__).parent.absolute()
 
@@ -154,4 +154,4 @@ class CUDABinder(Binder):
         return "cuda"
     
     def sources(self):
-        return ["fused_softmax.cu", "CUDABinder.cpp"]
+        return ["fused_softmax.cu", "fused_ngram_repeat_block.cu", "fused_triang_softmax.cu", "CUDABinder.cpp"]
