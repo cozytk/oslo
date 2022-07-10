@@ -3,7 +3,7 @@ from oslo.torch.utils.multi_tensor_apply import multi_tensor_applier
 from oslo.torch._C import get_novograd_kernel
 
 
-class FusedNovoGrad(torch.optim.Optimizer):
+class FusedNovograd(torch.optim.Optimizer):
 
     """Implements NovoGrad algorithm.
 
